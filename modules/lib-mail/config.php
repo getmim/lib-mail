@@ -2,7 +2,7 @@
 
 return [
     '__name' => 'lib-mail',
-    '__version' => '0.0.1',
+    '__version' => '0.1.0',
     '__git' => 'git@github.com:getmim/lib-mail.git',
     '__license' => 'MIT',
     '__author' => [
@@ -11,11 +11,16 @@ return [
         'website' => 'https://iqbalfn.com/'
     ],
     '__files' => [
-        'modules/lib-mail' => ['install','update','remove']
+        'modules/lib-mail' => ['install','update','remove'],
+        'theme/mail' => ['install','remove']
     ],
     '__dependencies' => [
         'required' => [],
-        'optional' => []
+        'optional' => [
+            [
+                'lib-mail-phpmailer' => NULL
+            ]
+        ]
     ],
     'autoload' => [
         'classes' => [
@@ -29,5 +34,6 @@ return [
             ]
         ],
         'files' => []
-    ]
+    ],
+    'libMail' => []
 ];
